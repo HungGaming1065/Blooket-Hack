@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Created by Tivotal -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Button Animation</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="button-container">
+      <label class="btn" id="download-btn">
+        <input class="input" type="checkbox" />
+        <span class="circle">
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+          >
+            <path
+              d="M12 19V5m0 14-4-4m4 4 4-4"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke="currentColor"
+            ></path>
+          </svg>
+          <div class="square"></div>
+        </span>
+        <p class="title">Download</p>
+        <p class="title">Open</p>
+      </label>
+      <p class="note">1.Nhấn nút ⬇️ để lấy tệp sau đó Download</p>
+      <p class="note">2.Click link sau: <a href="https://www.youtube.com/watch?v=U7yyCtmYp5M&ab_channel=CodeMark" class="text-link" id="redirect-text">[📹]</a> và xem video đó để cài đặt</p>
+      <p class="note">Link dự phòng: <a href="gitlab.com/blooket/blooket-cheats/-/raw/main/cheats/gui.js?ref_type=heads" class="text-link" id="redirect-text">[📩]</a>   (Lưu ý không click link này nhé!)</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.getElementById('download-btn').addEventListener('click', function() {
+        // Thời gian cho hoạt ảnh (3.5 giây)
+        const animationDuration = 3500; // 3.5 giây (3500 ms)
+
+        // Đợi cho đến khi hoạt ảnh hoàn tất
+        setTimeout(function() {
+          // Chuyển hướng đến liên kết đầu tiên
+          window.location.href = 'https://drive.google.com/file/d/1CLm8ltBKhgT6sqAZjTwZ_BUVfW7btQsx/view?usp=drive_link';
+        }, animationDuration);
+      });
+    </script>
+  </body>
+</html>
